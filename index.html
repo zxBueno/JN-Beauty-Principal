@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JN Beauty Studio — Extensão e Design de Cílios</title>
+<meta name="description" content="JN Beauty Studio — extensão de cílios com mapeamento de curvatura e comprimento personalizado. Agende seu horário em São Paulo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 8C54 38 62 46 92 50C62 54 54 62 50 92C46 62 38 54 8 50C38 46 46 38 50 8Z' fill='%236b4423'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav__mark" href="#topo">
+    <span class="mark__jn">JN</span><span class="mark__div"></span><span class="mark__name">Beauty Studio</span>
+  </a>
+
+  <nav class="nav__links" id="navLinks">
+    <a href="#metodo" class="nav__link">Método</a>
+    <a href="#servicos" class="nav__link">Serviços</a>
+    <a href="#galeria" class="nav__link">Antes &amp; depois</a>
+    <a href="#depoimentos" class="nav__link">Depoimentos</a>
+    <a href="#contato" class="nav__link">Contato</a>
+    <a href="#contato" class="nav__cta nav__cta--mobile">Agendar horário</a>
+  </nav>
+
+  <a class="nav__cta" href="#contato">Agendar horário</a>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="topo">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__text">
+      <p class="eyebrow-label" data-reveal>Extensão de cílios · São Paulo</p>
+      <h1 data-reveal>Cada olhar tem<br>uma <em>arquitetura</em><br>própria.</h1>
+      <p class="hero__sub" data-reveal>
+        Mapeamento de curvatura e comprimento antes de qualquer fio ser aplicado —
+        para um volume que respeita o formato natural do seu olho.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a class="btn btn--primary" href="#contato">Agendar horário</a>
+        <a class="btn btn--ghost" href="#servicos">Ver serviços<span class="btn__arrow">↓</span></a>
+      </div>
+    </div>
+
+    <div class="hero__diagram" data-reveal aria-hidden="true">
+      <svg viewBox="0 0 320 260" class="eye-svg">
+        <path class="eye-svg__lowerlid" d="M60 158 C110 195 230 195 280 150"/>
+        <line class="eye-svg__guide" x1="70" y1="150" x2="70" y2="205"/>
+        <line class="eye-svg__guide" x1="170" y1="86" x2="170" y2="205"/>
+        <line class="eye-svg__guide" x1="270" y1="140" x2="270" y2="205"/>
+        <line class="eye-svg__baseline" x1="30" y1="205" x2="300" y2="205"/>
+
+        <path class="eye-svg__lashline" d="M70 150 C100 110 140 90 170 86 C210 82 250 100 270 140"/>
+
+        <g class="eye-svg__ticks">
+          <line style="--i:0" x1="80" y1="140" x2="75" y2="128"/>
+          <line style="--i:1" x1="108" y1="115" x2="105" y2="102"/>
+          <line style="--i:2" x1="140" y1="96" x2="139" y2="82"/>
+          <line style="--i:3" x1="170" y1="86" x2="170" y2="70"/>
+          <line style="--i:4" x1="200" y1="88" x2="203" y2="73"/>
+          <line style="--i:5" x1="230" y1="100" x2="235" y2="87"/>
+          <line style="--i:6" x1="258" y1="124" x2="264" y2="113"/>
+        </g>
+
+        <path class="eye-svg__curl" d="M186 76 A14 14 0 0 1 204 74"/>
+
+        <circle class="eye-svg__point" cx="70" cy="150" r="4"/>
+        <circle class="eye-svg__point" cx="170" cy="86" r="4"/>
+        <circle class="eye-svg__point" cx="270" cy="140" r="4"/>
+      </svg>
+
+      <span class="tag" style="--tx:21.9%; --ty:57.7%; --i:0">canto interno</span>
+      <span class="tag" style="--tx:53.1%; --ty:24%; --i:1">curva D</span>
+      <span class="tag" style="--tx:73.4%; --ty:31%; --i:2">13mm</span>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE STRIP ============ -->
+  <section class="strip" aria-hidden="true">
+    <div class="strip__track">
+      <span>MAPEAMENTO</span><span class="dot">·</span>
+      <span>CURVATURA</span><span class="dot">·</span>
+      <span>VOLUME</span><span class="dot">·</span>
+      <span>PRECISÃO</span><span class="dot">·</span>
+      <span>MAPEAMENTO</span><span class="dot">·</span>
+      <span>CURVATURA</span><span class="dot">·</span>
+      <span>VOLUME</span><span class="dot">·</span>
+      <span>PRECISÃO</span><span class="dot">·</span>
+    </div>
+  </section>
+
+  <!-- ============ MÉTODO ============ -->
+  <section class="metodo" id="metodo">
+    <div class="metodo__head">
+      <p class="eyebrow-label" data-reveal>O método</p>
+      <h2 data-reveal>Três etapas, <em>na mesma ordem</em>, sempre.</h2>
+    </div>
+
+    <ol class="metodo__steps">
+      <li data-reveal style="--i:0">
+        <span class="step__num">01</span>
+        <h3>Mapeamento</h3>
+        <p>Avaliação do formato do olho e dos cílios naturais para definir curvatura, comprimento e volume ideais em cada zona.</p>
+      </li>
+      <li data-reveal style="--i:1">
+        <span class="step__num">02</span>
+        <h3>Aplicação</h3>
+        <p>Colocação fio a fio — clássico, egípcio ou brasileiro — sempre respeitando o isolamento de cada fio natural.</p>
+      </li>
+      <li data-reveal style="--i:2">
+        <span class="step__num">03</span>
+        <h3>Acabamento</h3>
+        <p>Selagem, escovagem final e orientações de cuidados para prolongar a durabilidade do volume.</p>
+      </li>
+    </ol>
+
+    <div class="metodo__badges" data-reveal>
+      <span>Atendimento individual</span>
+      <span>Cola hipoalergênica</span>
+    </div>
+  </section>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <!-- Os valores e durações abaixo são preenchidos pelo array SERVICES_DATA no script.js — edite lá, não aqui. -->
+  <section class="servicos" id="servicos">
+    <div class="servicos__head">
+      <p class="eyebrow-label" data-reveal>Serviços</p>
+      <h2 data-reveal>Tabela de <em>serviços</em></h2>
+    </div>
+    <div class="servicos__list" id="servicosList"></div>
+    <p class="servicos__note" data-reveal>Valores sujeitos a avaliação presencial. Formas de pagamento: Pix, débito e crédito.</p>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <!-- Placeholders com gradiente — troque .galeria__img por <img src="https://i.imgur.com/SEU-LINK.jpg" alt="..."> seguindo o padrão dos outros sites. -->
+  <section class="galeria" id="galeria">
+    <div class="galeria__head">
+      <p class="eyebrow-label" data-reveal>Resultados</p>
+      <h2 data-reveal>Antes &amp; <em>depois</em></h2>
+    </div>
+    <div class="galeria__grid" id="galeriaGrid"></div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="contato" id="contato">
+    <div class="contato__grid">
+      <div class="contato__form-wrap" data-reveal>
+        <p class="eyebrow-label">Agendamento</p>
+        <h2>Vamos marcar<br>o seu <em>horário</em>?</h2>
+        <p class="contato__lead">Preencha os campos abaixo — sua mensagem abre pronta no WhatsApp, é só confirmar o envio.</p>
+
+        <form class="form" id="agendaForm">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="field">
+            <label for="servico">Serviço desejado</label>
+            <select id="servico" name="servico" required></select>
+          </div>
+          <div class="field">
+            <label for="horario">Melhor dia e horário (Atenção com os horários de funcionamento)</label>
+            <input type="text" id="horario" name="horario" placeholder="Ex: sábado à tarde">
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Alguma observação?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+
+
+        <div class="info-card">
+          <h3>Horários</h3>
+          <table class="hours">
+            <tr><td>Quarta — Sexta</td><td>17h30 às 22h</td></tr>
+            <tr><td>Sábado</td><td>09h às 17h</td></tr>
+            <tr><td>Domingo e Segunda</td><td>10h às 13h</td></tr>
+          </table>
+        </div>
+
+        <div class="info-card info-card--links">
+          <h3>Contato direto</h3>
+          <!-- EDITAR: número de WhatsApp real -->
+          <a href="https://wa.me/5511937445379" target="_blank" rel="noopener" class="link-row">
+            <span>WhatsApp</span><span>(11)93744-5379</span>
+          </a>
+          <a href="https://www.instagram.com/espaco.jnbeauty?stkn=MXNoZnd2cmY3aW4zNw==" target="_blank" rel="noopener" class="link-row">
+            <span>Instagram</span><span>@espaco.jnbeauty</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="brand-lockup">
+    <span class="brand-lockup__jn">JN</span>
+    <span class="brand-lockup__rule-row">
+      <span class="brand-lockup__rule"></span>
+      <svg class="brand-lockup__spark" viewBox="0 0 100 100" fill="currentColor"><path d="M50 8C54 38 62 46 92 50C62 54 54 62 50 92C46 62 38 54 8 50C38 46 46 38 50 8Z"/></svg>
+      <span class="brand-lockup__rule"></span>
+    </span>
+    <span class="brand-lockup__name">Beauty Studio</span>
+  </div>
+  <p>Extensão de cílios — São Paulo</p>
+  <div class="footer__social">
+    <a href="https://www.instagram.com/espaco.jnbeauty?stkn=MXNoZnd2cmY3aW4zNw==" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://wa.me/5511937445379" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5511937445379" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.46.05-.9.23-3.02-.63-2.56-1.05-4.2-3.64-4.33-3.81-.13-.17-1.03-1.37-1.03-2.61 0-1.24.65-1.85.88-2.1.22-.25.49-.31.65-.31.16 0 .33 0 .47.01.16.01.36-.06.56.43.22.53.74 1.83.8 1.96.06.13.1.28.02.45-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.26.27-.11.53.15.26.66 1.09 1.42 1.76.98.87 1.8 1.14 2.06 1.27.26.13.41.11.56-.07.16-.18.66-.77.84-1.03.18-.26.35-.22.59-.13.24.09 1.53.72 1.8.85.26.13.44.19.5.3.06.11.06.61-.16 1.23z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
