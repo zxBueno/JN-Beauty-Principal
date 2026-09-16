@@ -383,9 +383,14 @@ section { padding: var(--section-pad) var(--gutter); position: relative; }
   transition: transform .5s var(--ease);
 }
 .galeria__card:hover { transform: scale(1.03); }
+.galeria__card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.galeria__card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55), transparent 55%);
+}
 .galeria__card svg { position: absolute; inset: 0; margin: auto; width: 46%; opacity: .5; }
 .galeria__card span {
-  position: relative; font-family: var(--font-mono); font-size: .72rem;
+  position: relative; z-index: 1; font-family: var(--font-mono); font-size: .72rem;
   color: var(--cream); letter-spacing: .04em; text-transform: uppercase;
 }
 

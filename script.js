@@ -28,7 +28,13 @@ const SERVICES_DATA = [
   },
 ];
 
-const GALLERY_COUNT = 3;
+/* [EDITAR] Cole aqui o link de cada foto (antes/depois). Deixe "" para manter
+   o cartão placeholder enquanto não tiver a foto daquele item ainda. */
+const GALLERY_DATA = [
+  { img: "https://i.imgur.com/7c9zWd9.jpeg", label: "Antes & depois 01" },
+  { img: "https://i.imgur.com/8Ebczm9.jpeg", label: "Antes & depois 02" },
+  { img: "https://i.imgur.com/AILjsim.jpeg", label: "Antes & depois 03" },
+];
 
 /* ---------- helpers ---------- */
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
@@ -63,20 +69,23 @@ function renderServices() {
   });
 }
 
-/* ---------- render: galeria (placeholders) ---------- */
+/* ---------- render: galeria ---------- */
 function renderGallery() {
   const grid = $("#galeriaGrid");
   if (!grid) return;
   const lashIcon = `<svg viewBox="0 0 100 60" fill="none"><path d="M8 35C25 15 75 15 92 35" stroke="white" stroke-width="4" stroke-linecap="round"/><path d="M25 22l-3-8M45 15v-9M65 15l3-9M82 24l5-7" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>`;
 
-  for (let i = 1; i <= GALLERY_COUNT; i++) {
+  GALLERY_DATA.forEach((item, i) => {
     const card = document.createElement("div");
     card.className = "galeria__card";
     card.setAttribute("data-reveal", "");
     card.style.setProperty("--i", i % 3);
-    card.innerHTML = `${lashIcon}<span>Antes &amp; depois ${String(i).padStart(2, "0")}</span>`;
+    const label = item.label || `Antes & depois ${String(i + 1).padStart(2, "0")}`;
+    card.innerHTML = item.img
+      ? `<img src="${item.img}" alt="${label}" loading="lazy"><span>${label}</span>`
+      : `${lashIcon}<span>${label}</span>`;
     grid.appendChild(card);
-  }
+  });
 }
 
 /* ---------- render: depoimentos ---------- */
