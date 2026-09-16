@@ -28,15 +28,6 @@ const SERVICES_DATA = [
   },
 ];
 
-/* [EDITAR] Depoimentos de exemplo — substitua pelos relatos reais das suas clientes. */
-const TESTIMONIALS_DATA = [
-  { quote: "Nunca pensei que extensão pudesse parecer tão natural.", name: "Marina S." },
-  { quote: "O mapeamento fez toda a diferença pro formato do meu olho.", name: "Fernanda A." },
-  { quote: "Volume russo ficou denso sem pesar nos olhos.", name: "Camila R." },
-  { quote: "Ambiente tranquilo e os cílios duraram até a manutenção seguinte.", name: "Juliana M." },
-  { quote: "Expliquei o efeito que eu queria e o resultado ficou perfeito.", name: "Beatriz L." },
-];
-
 const GALLERY_COUNT = 3;
 
 /* ---------- helpers ---------- */
