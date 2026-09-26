@@ -9,17 +9,17 @@ const SERVICES_DATA = [
   {
     name: "Volume Brasileiro",
     desc: "Técnica para quem deseja um efeito realçado e natural.",
-    price: "R$ 120 - M: R$90"
+    price: "R$ 105 - M: R$ 75"
   },
   {
     name: "Volume Egípcio",
     desc: "Técnica para quem deseja um olhar mais volumoso.",
-    price: "R$ 140 - M: R$105"
+    price: "R$ 135 - M: R$ 100"
   },
   {
     name: "Volume Fox Eyes",
     desc: "Técnica para quem deseja um olhar mais marcante e delineado.",
-    price: "R$ 160 - M: R$120"
+    price: "R$ 145 - M: R$ 105"
   },
   {
     name: "Remoção",
